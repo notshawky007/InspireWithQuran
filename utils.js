@@ -29,13 +29,3 @@ export function observeElements(sectionElements) {
     observer.observe(element);
   });
 }
-
-export function clickingLabelsWithKeyboard(labelElements) {
-  const clickLabelEvent = (item) => {
-    item.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") item.click();
-    });
-  };
-
-  labelElements.forEach((item) => clickLabelEvent(item));
-}
